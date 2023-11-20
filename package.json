@@ -6,14 +6,7 @@
   "scripts": {
     "start": "node dist/main.js",
     "dev": "npx nodemon",
-    "build": "npx tsc --outDir ./dist",
-    "lint": "gts lint",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint"
+    "build": "npx tsc --outDir ./dist"
   },
   "dependencies": {
     "cors": "^2.8.5",
