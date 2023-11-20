@@ -3,10 +3,10 @@ import type {Connection} from 'mysql2/typings/mysql/lib/Connection';
 
 export class MySqlDB {
   private static _connection: Connection = mysql.createConnection({
-    user: 'root',
-    password: 'fsociety',
-    host: '127.0.0.1',
-    database: 'educarparatransformarmobile',
+    user: process.env.user,
+    password: process.env.password,
+    host: process.env.host,
+    database: process.env.database,
   });
 
   constructor() {}

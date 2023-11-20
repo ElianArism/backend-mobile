@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 import * as cors from 'cors';
 import * as express from 'express';
 import appRouter from './routes/router';
@@ -11,6 +14,5 @@ app.use(express.json());
 app.use('/api', appRouter);
 
 app.listen(PORT, async () => {
-  // await DB.connectDB();
   console.log('SERVER RUNNING AT PORT: ' + PORT);
 });

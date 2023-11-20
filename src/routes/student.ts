@@ -3,6 +3,6 @@ import {getStudents} from '../controllers/student';
 
 const studentRoutes = Router();
 
-studentRoutes.get('/', getStudents);
+studentRoutes.get('/:professorDNI', getStudents);
 
 export default studentRoutes;
