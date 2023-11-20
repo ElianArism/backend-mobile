@@ -1,4 +1,4 @@
-import * as mysql from 'mysql2';
+import mysql from 'mysql2';
 import type {Connection} from 'mysql2/typings/mysql/lib/Connection';
 
 export class MySqlDB {

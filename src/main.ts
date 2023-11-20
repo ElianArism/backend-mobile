@@ -1,8 +1,8 @@
-import * as dotenv from 'dotenv';
+import dotenv from 'dotenv';
 dotenv.config();
 
-import * as cors from 'cors';
-import * as express from 'express';
+import cors from 'cors';
+import express from 'express';
 import appRouter from './routes/router';
 
 const PORT = process.env.PORT || 8086;
