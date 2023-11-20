@@ -1,14 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-// import express from 'express';
-const db_1 = require("./db");
-const connection_1 = require("./db/connection");
-// const app = express();
-// const PORT = 3000;
-const test = async () => {
-    await connection_1.DB.connectDB();
-    const professors = await db_1.Professor.findAll();
-    console.log(professors);
-};
-test();
+const dotenv = require("dotenv");
+dotenv.config();
+const cors = require("cors");
+const express = require("express");
+const router_1 = require("./routes/router");
+const PORT = 3000;
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use('/api', router_1.default);
+app.listen(PORT, async () => {
+    console.log('SERVER RUNNING AT PORT: ' + PORT);
+});
 //# sourceMappingURL=main.js.map
