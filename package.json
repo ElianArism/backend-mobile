@@ -1,0 +1,33 @@
+{
+  "name": "sist-de-gestion-educar-para-transformar-mobile-backend",
+  "version": "1.0.0",
+  "description": "Sistema de gestion del centro educativo educar para transformar, centrado en la app movil.",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "dev": "npx nodemon",
+    "build": "npx tsc --outDir ./dist",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run compile",
+    "pretest": "npm.cmd run compile",
+    "posttest": "npm.cmd run lint"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.3",
+    "sequelize": "^6.35.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.16",
+    "@types/express": "^4.17.21",
+    "@types/node": "20.8.2",
+    "gts": "^5.2.0",
+    "nodemon": "^3.0.1",
+    "typescript": "~5.2.0"
+  }
+}

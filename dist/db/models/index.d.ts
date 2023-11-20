@@ -1,0 +1,1 @@
+export { Professor } from './Professor';
